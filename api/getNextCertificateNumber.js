@@ -1,6 +1,9 @@
 import { MongoClient } from 'mongodb';
 
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://certificate-by-upload-file.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  
   try {
     // Connect to the MongoDB cluster
     const client = await MongoClient.connect(process.env.MONGODB_URI);

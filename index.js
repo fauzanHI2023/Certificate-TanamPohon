@@ -31,9 +31,6 @@ submitBtn.addEventListener("click", async () => {
       userName.value = "";
       userEmail.value = "";
       document.getElementById("popup").style.display = "flex";
-      // setTimeout(() => {
-      //   location.reload(true); // Reload the page
-      // }, 5000);
     } catch (error) {
       console.log("Error Occured", error);
     }
@@ -58,8 +55,6 @@ const generatePDF = async (name, certificateNumber) => {
   // Halaman pertama dokumen
   const pages = pdfDoc.getPages();
   const firstPage = pages[0];
-
-  // Menghitung position
 
   const currentDate = new Date();
   const lastTwoDigitsOfYear = String(currentDate.getFullYear()).slice(-2);
