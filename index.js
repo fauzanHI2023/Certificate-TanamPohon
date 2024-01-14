@@ -71,7 +71,7 @@ const generatePDF = async (name, certificateNumber) => {
 
   firstPage.drawText(`${formattedDate}-00${certificateNumber}`, {
     x: 110,
-    y: 860,
+    y: 864,
     size: 15,
     font: SanChezFont,
     color: rgb(1, 1, 1),
